@@ -1,6 +1,7 @@
 import gql from 'graphql-tag'
+import { DocumentNode } from 'graphql' 
 
-export default gql`
+const query: DocumentNode = gql`
   type User {
     _id: ID!
     name: String!
@@ -11,3 +12,5 @@ export default gql`
     queryTest: Boolean
   }
 `
+
+export default query
